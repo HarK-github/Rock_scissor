@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>ROCK PAPER SCISSOR</title>
+    <script>
+        let compscore = 0, usrscore = 0, counter = 0;
+
+
+        let a = ["Rock","Paper","Scissor"];
+        function getCompChoice(){
+            return a[Math.ceil(Math.random()*100 % 2)];
+        }
+        let getPlayerChoice = () => prompt("Enter your choice : ['Rock','Paper','Scissor']");
+
+        function playgame(){
+            let plyr = getPlayerChoice(),comp = getCompChoice();
+            if (plyr == "Rock" && comp == "Scissor" || plyr == "Paper" && comp == "Rock" ){
+                alert(`Player won \n Player choice : ${plyr} \n Computer choice : ${comp}`);
+                compscore +=1;
+            } else if (plyr == comp){
+                alert("TIE !!");
+            }else
+            {                
+                alert(`Computer won \n Player choice : ${plyr} \n Computer choice : ${comp}`);
+                usrscore +=1;
+            }
+            counter += 1;
+            
+        }
+        let endgame = ()=> alert(`Player score :${usrscore} \n Computer score ${compscore} \n Total games : ${counter}`)
+        
+        playgame();
+        playgame();
+        playgame();
+        playgame();
+        endgame();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
