@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0%;           
+            background-image: url("./im3.jpg"); 
+            background-size: 100% 100%;
+        }
+
+
+        .top{
+            display: flex;
+            justify-content: center;
+            color:white;
+            backdrop-filter: blur(20px);
+            -webkit--backdrop-filter: blur(20px);
+            padding :30px;
+            
+            border-radius:50px;
+        }
+        .mid{
+            margin: 100px 10px;
+            padding:50px;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            backdrop-filter: blur(50px);
+            -webkit--backdrop-filter: blur(50px);
+        }
+        .sm-box,.sm-box2{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 200px;
+            border-radius: 40px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .box_main{
+            background-color: cornflowerblue;
+            width: 300px;
+            height: 50px;
+            margin: 50px;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .b_P,.b_R,.b_S{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding:20px;
+            margin: 20px;
+            background-size: 100% 100%;
+            height: 100px;
+            width: 100px;
+            border-radius: 20px;
+        }
+        
+
+        .b_R{
+            background-image: url('./R.png');
+        }
+        .b_P{
+            background-image: url('./P.png');
+        }
+        .b_S{
+            background-image: url('./S.png');
+        }
+        button{
+            font-size:20px;
+            font-family:'Helvetica';
+            margin: 20px;
+            border-radius: 20px;
+            width: 200px;
+            height: 70px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="top">
+        <h1 style="font-size:100px;font-family:'Helvetica';color: rgb(134, 134, 139);">ROCK PAPER N' SCISSORS</h1>
+    </div>
+    <div class="mid">
+            <h1 style="font-size:40px;font-family:'Helvetica';color: rgb(134, 134, 139);">COMPUTER</h1>
+            <div class = "sm-box">
+                <div class="b_R">Rock</div>
+                <div class="b_P">Paper</div>
+                <div class="b_S">Scissor</div>
+            </div>
+        
+        <div> <button onclick="playgame()">Select and Play</button></div>
+        
+            <div class = "sm-box2">
+                <button onclick="choice(1)" class="b_R">Rock</button>
+                <button onclick="choice(2)" class="b_P">Paper</button>
+                <button onclick="choice(3)" class="b_S">Scissor</button>
+            </div>
+            <h1 style="font-size:40px;font-family:'Helvetica';color: rgb(134, 134, 139);">PLAYER</h1>
+
+        
+    </div>
+    <div class="bottom">
+        <h1 style="background-color: rgba(0, 0, 0, 0.508);color: white;height: 60px;font-family:'Helvetica';align-self: center;">Copyright @ Harshit K </h1>
+    </div>
+    </div>
+    
+    <script src="./Rock_Paper.js" defer></script>
+</body>
+</html>
